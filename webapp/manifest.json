@@ -41,6 +41,15 @@
 		}
 	},
 	"sap.ui5": {
+		"config": {
+			"sapFiori2Adaptation": {
+				"style": true,
+				"collapse": true,
+				"title": true,
+				"back": true,
+				"hierarchy": true
+			}
+		},
 		"rootView": {
 			"viewName": "com.hq.test.EmployeeList_northWind.view.App",
 			"type": "XML",
@@ -85,24 +94,21 @@
 				},
 				"async": true
 			},
-			"routes": [
-				{
-					"pattern": "",
-					"name": "master",
-					"target": [
-						"object",
-						"master"
-					]
-				},
-				{
-					"pattern": "Employees/{objectId}",
-					"name": "object",
-					"target": [
-						"master",
-						"object"
-					]
-				}
-			],
+			"routes": [{
+				"pattern": "",
+				"name": "master",
+				"target": [
+					"object",
+					"master"
+				]
+			}, {
+				"pattern": "Employees/{objectId}",
+				"name": "object",
+				"target": [
+					"master",
+					"object"
+				]
+			}],
 			"targets": {
 				"master": {
 					"viewName": "Master",
